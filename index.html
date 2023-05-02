@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center;">Enter the Value</h1>
+        <div class="row">
+            <input type="number" name="Input" id="Input" placeholder="Input Value" style="background-color: aqua;" value="">
+            <input type="number" name="Maximum"  id="Maximum" placeholder="Maximum Value"  style="background-color: aqua;" value="">
+            <br><br>
+            <button onclick="myfunction()">Click me</button>
+        </div>
+
+        <script>
+            function myfunction(){
+                let Input = document.getElementById("Input").value;
+                let Maximum = document.getElementById("Maximum").value;
+                // var xvalue = ['Result'];
+                // var yvalue = [55];
+                var xValues = ["Italy"];
+var yValues = [Input];
+var zValues = [Maximum];
+var barColors = ["#C2E3FF"];
+var barColors1 = ["#008CFF"];
+var barColors3 = ["#C2E3FF"]                
+                if (Input > Maximum)
+                {
+                    alert("Error")
+                    new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: yValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    } , {
+        labels : zValues , 
+        data : zValues ,
+        backgroundColor : barColors1 ,
+    }]
+  },
+  options: {
+    animation: {
+      duration: 10,
+    },
+    legend: {display: false},
+        title: {
+      display: true,
+      text: "Vertical"
+    } , 
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: false
+        },
+      }],
+      yAxes: [{
+        stacked: true
+      }],
+    }, // scales
+    legend: {
+      display: true
+    }
+}} , 
+ );
+
+ new Chart("myChart1", {
+  type: "pie",
+  data: {
+    labels: yValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    } , {
+        labels : zValues , 
+        data : zValues ,
+        backgroundColor : barColors1 ,
+    }]
+  },
+  options: {
+    animation: {
+      duration: 10,
+    },
+    legend: {display: false},
+        title: {
+      display: true,
+      text: "Vertical"
+    } , 
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: false
+        },
+      }],
+      yAxes: [{
+        stacked: true
+      }],
+    }, // scales
+    legend: {
+      display: true
+    }
+}} , 
+ );
+
+ new Chart("myChart3", {
+  type: "bar",
+  data: {
+    labels: yValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    } , {
+        labels : zValues , 
+        data : zValues ,
+        backgroundColor : barColors1 ,
+    }]
+  },
+  options: {
+    animation: {
+      duration: 10,
+    },
+    legend: {display: false},
+        title: {
+      display: true,
+      text: "Vertical"
+    } , 
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: false
+        },
+      }],
+      yAxes: [{
+        stacked: true
+      }],
+    }, // scales
+    legend: {
+      display: true
+    }
+}} , 
+ );
+                }
+                else
+                {
+                    alert("Perfect")
+
+                    new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: zValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: zValues
+    } , {
+        labels : yValues , 
+        data : yValues ,
+        backgroundColor : barColors1 ,
+    }]
+  },
+  options: {
+    animation: {
+      duration: 10,
+    },
+    legend: {display: false},
+        title: {
+      display: true,
+      text: "Vertical"
+    } , 
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: false
+        },
+      }],
+      yAxes: [{
+        stacked: true
+      }],
+    }, // scales
+    legend: {
+      display: true
+    }
+}} , 
+ );
+
+ new Chart("myChart1", {
+  type: "pie",
+  data: {
+    labels: zValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: zValues
+    } , {
+        labels : yValues , 
+        data : yValues ,
+        backgroundColor : barColors1 ,
+    }]
+  },
+  options: {
+    animation: {
+      duration: 10,
+    },
+    legend: {display: false},
+        title: {
+      display: true,
+      text: "Vertical"
+    } , 
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: false
+        },
+      }],
+      yAxes: [{
+        stacked: true
+      }],
+    }, // scales
+    legend: {
+      display: true
+    }
+}} , 
+ );
+
+ new Chart("myChart3", {
+  type: "bar",
+  data: {
+    labels: zValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: zValues
+    } , {
+        labels : yValues , 
+        data : yValues ,
+        backgroundColor : barColors1 ,
+    }]
+  },
+  options: {
+    animation: {
+      duration: 10,
+    },
+    legend: {display: false},
+        title: {
+      display: true,
+      text: "Vertical"
+    } , 
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: false
+        },
+      }],
+      yAxes: [{
+        stacked: true
+      }],
+    }, // scales
+    legend: {
+      display: true
+    }
+}} , 
+ );
+                }
+            }
+        </script>
+       
+       <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+       <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+       <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+
+    </div>
+</body>
+</html>
